@@ -1,0 +1,192 @@
+//user requests:
+GET http://localhost:3000/users
+
+###
+GET http://localhost:3000/users/6497e079ef8a93c88aa569f2
+
+###
+
+POST http://localhost:3000/users/
+Content-Type: application/json
+
+{
+  "name": "Michael Wilson",
+  "email": "michaelwilson@example.com",
+  "phone": "1111111111"
+}
+
+
+
+
+
+
+###
+
+PUT http://localhost:3000/users/6497e4e88d520623bb0b1a66
+Content-Type: application/json
+
+{
+  "name": "matty charitan",
+  "phone": "0548546154",
+  "email": "mattycharitan@gmail.com"
+}
+
+###
+
+DELETE  http://localhost:3000/users/64977736fc499263d98be156
+
+
+
+###
+
+
+// fundraisers requests:
+GET http://localhost:3000/fundraisers
+
+###
+GET http://localhost:3000/fundraisers/649d4bdb45758d5ef036adbd
+###
+
+PUT http://localhost:3000/fundraisers/649d4bdb45758d5ef036adbd
+Content-Type: application/json
+
+{
+  "goal":1000
+}
+
+###
+POST http://localhost:3000/fundraisers/
+Content-Type: application/json
+
+{
+  "name": "Olivia Wilson",
+  "email": "oliviawilson@example.com",
+  "phone": "6666666666",
+  "goal":9441
+}
+
+
+
+
+
+###
+POST http://localhost:3000/fundraisers/64afa4d38ef279da90a45306
+Content-Type: application/json
+
+{
+  "donor":"649d4b7045758d5ef036adb0",
+  "amount":50 
+}
+
+
+
+
+###
+DELETE  http://localhost:3000/fundraisers/64afa47685c89520f1252908
+
+
+
+// groups requests:
+###
+GET http://localhost:3000/groups
+
+###
+GET  http://localhost:3000/groups/64afb0ae45cb320958baebda
+
+###
+POST http://localhost:3000/groups
+Content-Type: application/json
+
+{
+  "name": "Group-B",
+  "goal":10000
+}
+
+###
+PUT http://localhost:3000/groups/64afb0ae45cb320958baebda
+Content-Type: application/json
+
+{
+   "members":["64afb05345cb320958baebcf", "64afb06745cb320958baebd3","64afb08145cb320958baebd7"  ]
+}
+
+###
+DELETE http://localhost:3000/groups/649b64beb042f5850c6e6480
+
+
+
+// donations requests:
+###
+GET http://localhost:3000/donations
+
+###
+GET http://localhost:3000/donations/649b68371542ef56e25900c5
+
+###
+POST  http://localhost:3000/donations
+Content-Type: application/json
+
+{
+  "donor": "649d4b9745758d5ef036adb6", 
+  "amount": 120
+}
+
+###
+PUT  http://localhost:3000/donations/649b68371542ef56e25900c5
+Content-Type: application/json
+
+{
+  
+  "amount": 11
+}
+
+###
+DELETE  http://localhost:3000/donations/64afb22545cb320958baec08
+
+// funds requests:
+###
+GET http://localhost:3000/funds
+###
+GET http://localhost:3000/funds/649d4ed2fd9b721628cfe5ba
+###
+POST http://localhost:3000/funds
+Content-Type: application/json
+
+{
+  "name": "Big Fund",
+  "data": "2023-06-28",
+  "goal": 1000000,
+  "donated": 0,
+  "groups": ["64afb0ae45cb320958baebda", "64afb0b745cb320958baebdc"]
+}
+###
+PUT http://localhost:3000/funds/649b6e2a130edf388eca031e
+Content-Type: application/json
+
+{
+  "groups": [
+    "649b646fb042f5850c6e6478"
+  ]
+}
+
+###
+DELETE  http://localhost:3000/funds/649b6e5a130edf388eca0320
+
+//manage campaign:
+###
+GET http://localhost:3000/manageCampaign/64afb16a45cb320958baebe7
+###
+GET http://localhost:3000/manageCampaign/64afb16a45cb320958baebe7/groups
+###
+GET http://localhost:3000/manageCampaign/64afb16a45cb320958baebe7/donations
+
+###
+//make a donation
+POST  http://localhost:3000/funds/64afb16a45cb320958baebe7/64afb0ae45cb320958baebda/64afb05345cb320958baebcf
+Content-Type: application/json
+
+{
+  "donor": "64afaf5945cb320958baebbb", 
+  "amount": 120
+}
+
