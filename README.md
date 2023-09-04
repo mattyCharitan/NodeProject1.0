@@ -16,5 +16,6 @@ image - mattycharitan/matchingsystem:1.0
 
 ```
 docker pull mattycharitan/matchingsystem:1.0
-docker run -d -p 3000:3000 mattycharitan/matchingsystem:1.0```
+docker run -p 3000:3000 mattycharitan/matchingsystem:1.0
+```
 
