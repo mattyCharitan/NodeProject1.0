@@ -11,5 +11,9 @@ Donation Platform API, a server designed for handling donations. The API offers 
 ## Testing API Routes
 
 For easy testing of API routes, you can use the VS Code REST Client extension. Simply execute API requests directly from the provided "route.rest" file, eliminating the need for external tools like Postman.
+## docker
+image - mattycharitan/matchingsystem:1.0
 
+docker pull mattycharitan/matchingsystem:1.0
+docker run -d -p 8080:80 mattycharitan/matchingsystem:1.0
 
