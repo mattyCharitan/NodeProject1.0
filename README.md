@@ -14,6 +14,6 @@ For easy testing of API routes, you can use the VS Code REST Client extension. S
 ## docker
 image - mattycharitan/matchingsystem:1.0
 
-docker pull mattycharitan/matchingsystem:1.0
-docker run -d -p 8080:80 mattycharitan/matchingsystem:1.0
+```docker pull mattycharitan/matchingsystem:1.0
+docker run -d -p 8080:80 mattycharitan/matchingsystem:1.0```
 
